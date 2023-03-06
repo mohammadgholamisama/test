@@ -23,8 +23,8 @@ export default function Courses() {
                 <div className="all-courses">
                     <Row>
                         {course.map(item => (
-                            <Col xs={6} sm={6} lg={4} xl={3}>
-                            <Link to='/' className="courses-box mt-4" key={item.id}>
+                            <Col xs={6} sm={6} lg={4} xl={3} key={item.id}>
+                            <Link to='/' className="courses-box mt-4" >
                                 <div className="course-img">
                                     <img src={item.img} alt="course" />
                                 </div>

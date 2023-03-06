@@ -1,5 +1,5 @@
 import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import './../node_modules/bootstrap/dist/css/bootstrap.css'
 import { Navigate, useRoutes } from 'react-router';
 import routes from './Router';
 
