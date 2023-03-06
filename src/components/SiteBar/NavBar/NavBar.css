@@ -124,3 +124,9 @@ nav::after {
     border-radius: 15px;
     padding: 5px 5px;
 }
+
+.activeMenu {
+    background-color: #23ad00;
+    font-weight: bold;
+    color: #ffffff;
+}

@@ -1,18 +1,18 @@
 import React from 'react'
 import { FaAngleDown, FaBars, FaUserAlt } from 'react-icons/fa'
 import { SlBasket } from 'react-icons/sl'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './NavBar.css'
 
 export default function NavBar() {
 
     let menuList = [
         { id: 6, title: 'خانه', link: '/', arrow: false },
-        { id: 1, title: 'فرانت اند', link: '#', arrow: true },
-        { id: 2, title: 'امنیت', link: '#', arrow: true },
-        { id: 3, title: 'مقالات', link: '#', arrow: true },
-        { id: 4, title: 'پایتون', link: '#', arrow: true },
-        { id: 5, title: 'مهارت های نرم', link: '#', arrow: false },
+        { id: 1, title: 'فرانت اند', link: '/l', arrow: true },
+        { id: 2, title: 'امنیت', link: '/l', arrow: true },
+        { id: 3, title: 'مقالات', link: '/l', arrow: true },
+        { id: 4, title: 'پایتون', link: '/l', arrow: true },
+        { id: 5, title: 'مهارت های نرم', link: '/l', arrow: false },
     ]
 
     document.addEventListener('click', event => {
@@ -35,9 +35,12 @@ export default function NavBar() {
                 <ul className="mobile-menu__list">
                     {menuList.map(item => (
                         <li className="mobile-menu__item" key={item.id}>
-                            <Link to={`${item.link}`} className='mobile-menu__item-link'>{item.title}</Link>
+                            <NavLink to={`${item.link}`} className={(link) => link.isActive ? 'mobile-menu__item-link activeMenu' : 'mobile-menu__item-link'}>{item.title}</NavLink>
                         </li>
                     ))}
+                    <li className="mobile-menu__item">
+                        <NavLink to='/account' className={(link) => link.isActive ? 'mobile-menu__item-link activeMenu' : 'mobile-menu__item-link'}>ورود / عضویت</NavLink>
+                    </li>
                 </ul>
             </div>
             <>
@@ -68,9 +71,9 @@ export default function NavBar() {
                             </div>
                             <div className="nav-bar__user d-flex align-items-center">
                                 <Link to='/account' className='btn  btn-info text-white mx-3 p-2 d-none d-lg-flex' style={{ fontSize: 14 }}>ورود / عضویت</Link>
-                                <button className='btn btn-success text-white mx-3 d-flrx d-lg-none'>
+                                <Link to='/account' className='btn btn-success text-white mx-3 d-flrx d-lg-none'>
                                     <FaUserAlt></FaUserAlt>
-                                </button>
+                                </Link>
                                 <div className="nav-bar__basket-icon d-flex align-items-center">
                                     <SlBasket></SlBasket>
                                 </div>

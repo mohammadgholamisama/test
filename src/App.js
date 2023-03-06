@@ -1,6 +1,6 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import { useRoutes } from 'react-router';
+import { Navigate, useRoutes } from 'react-router';
 import routes from './Router';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      {allRoutes}
+      {allRoutes ? allRoutes : <Navigate to='/' />}
     </>
   );
 }
