@@ -1,0 +1,58 @@
+.account-title {
+    font-size: 35px;
+    color: #e6e6e6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.356);
+}
+
+.account-page__text {
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.account-input__label {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+}
+
+.account-form__input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 2px #fff;
+    background-color: #2c2c2c;
+    color: #fff;
+    font-size: 25px;
+}
+
+.account-form__input:focus {
+    background-color: #5f5e5e;
+}
+
+.account-form__btn {
+    border: none;
+    background-color: #43C67A;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.account-form__btn:hover {
+    background-color: #34ac66;
+    color: white;
+}
+
+.account-form__signup {
+    border-right: 1px solid #fff;
+}
+
+@media only screen and (max-width: 991px) {
+    .account-form__signup {
+        border-right: none;
+    }
+}

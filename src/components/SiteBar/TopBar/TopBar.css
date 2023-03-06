@@ -1,0 +1,44 @@
+.top-bar {
+    background-color: #00000070;
+    padding: 5px 0;
+    z-index: 2;
+}
+
+.top-bar__list {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar__list-item {
+    margin-left: 10px;
+    padding: 0;
+}
+
+.top-bar__list-link {
+    text-decoration: none;
+    color: #d4d4d4;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.top-bar__list-link:hover {
+    color: #fff;
+}
+
+.top-bar__email {
+    color: #fff;
+    font-weight: bold;
+}
+
+.top-bar__icon-link {
+    color: #fff;
+    font-size: 20;
+}
+.top-bar__icon-link:hover{
+    color: #d4d4d4;
+}
+
+.top-bar__icons {
+    margin-right: 10px;
+}
