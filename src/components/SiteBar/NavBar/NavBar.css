@@ -72,6 +72,7 @@ nav::after {
     font-size: 25px;
     border-radius: 50%;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .nav-bar__basket-icon:hover {

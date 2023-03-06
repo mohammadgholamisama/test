@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import './Courses.css'
 
 export default function Courses() {
@@ -23,7 +24,7 @@ export default function Courses() {
                     <Row>
                         {course.map(item => (
                             <Col xs={6} sm={6} lg={4} xl={3}>
-                            <a href='#' className="courses-box mt-4" key={item.id}>
+                            <Link to='/' className="courses-box mt-4" key={item.id}>
                                 <div className="course-img">
                                     <img src={item.img} alt="course" />
                                 </div>
@@ -37,94 +38,9 @@ export default function Courses() {
                                         <span className='course-users text-center'>{item.student} <br /> <span></span></span>
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         </Col>
                         ))}
-                        {/* <Col xs={6} sm={6} lg={4} xl={3}>
-                            <div className="courses-box mt-4">
-                                <div className="course-img">
-                                    <img src="./images/courses/tailwind.jpg" alt="course" />
-                                </div>
-                                <div className="course-infos px-1 py-3">
-                                    <div className='course-group d-flex justify-content-center'>
-                                        <span>فرانت اند</span>
-                                    </div>
-                                    <p className='course-title px-1 mt-3 text-center'>آموزش جامع و پروژه محور Tailwind css</p>
-                                    <div className="course-status px-1 d-flex justify-content-between">
-                                        <span className='course-price'>350,000</span>
-                                        <span className='course-users text-center'>350 <br /> <span></span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col xs={6} sm={6} lg={4} xl={3}>
-                            <div className="courses-box mt-4">
-                                <div className="course-img">
-                                    <img src="./images/courses/tailwind.jpg" alt="course" />
-                                </div>
-                                <div className="course-infos px-1 py-3">
-                                    <div className='course-group d-flex justify-content-center'>
-                                        <span>فرانت اند</span>
-                                    </div>
-                                    <p className='course-title px-1 mt-3 text-center'>آموزش جامع و پروژه محور Tailwind css</p>
-                                    <div className="course-status d-flex justify-content-between">
-                                        <span className='course-price'>350,000</span>
-                                        <span className='course-users text-center'>350 <br /> <span></span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col xs={6} sm={6} lg={4} xl={3}>
-                            <div className="courses-box mt-4">
-                                <div className="course-img">
-                                    <img src="./images/courses/tailwind.jpg" alt="course" />
-                                </div>
-                                <div className="course-infos px-1 py-3">
-                                    <div className='course-group d-flex justify-content-center'>
-                                        <span>فرانت اند</span>
-                                    </div>
-                                    <p className='course-title px-1 mt-3 text-center'>آموزش جامع و پروژه محور Tailwind css</p>
-                                    <div className="course-status d-flex justify-content-between">
-                                        <span className='course-price'>350,000</span>
-                                        <span className='course-users text-center'>350 <br /> <span></span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col xs={6} sm={6} lg={4} xl={3}>
-                            <div className="courses-box mt-4">
-                                <div className="course-img">
-                                    <img src="./images/courses/tailwind.jpg" alt="course" />
-                                </div>
-                                <div className="course-infos px-1 py-3">
-                                    <div className='course-group d-flex justify-content-center'>
-                                        <span>فرانت اند</span>
-                                    </div>
-                                    <p className='course-title px-1 mt-3 text-center'>آموزش جامع و پروژه محور Tailwind css</p>
-                                    <div className="course-status d-flex justify-content-between">
-                                        <span className='course-price'>350,000</span>
-                                        <span className='course-users text-center'>350 <br /> <span></span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col xs={6} sm={6} lg={4} xl={3}>
-                            <div className="courses-box mt-4">
-                                <div className="course-img">
-                                    <img src="./images/courses/tailwind.jpg" alt="course" />
-                                </div>
-                                <div className="course-infos px-1 py-3">
-                                    <div className='course-group d-flex justify-content-center'>
-                                        <span>فرانت اند</span>
-                                    </div>
-                                    <p className='course-title px-1 mt-3 text-center'>آموزش جامع و پروژه محور Tailwind css</p>
-                                    <div className="course-status d-flex justify-content-between">
-                                        <span className='course-price'>350,000</span>
-                                        <span className='course-users text-center'>350 <br /> <span></span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col> */}
                     </Row>
                 </div>
             </div>

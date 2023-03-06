@@ -4,6 +4,7 @@ import { FaTelegram, FaYoutube, FaTwitter, FaInstagram } from 'react-icons/fa'
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import styled from '@emotion/styled'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function TopBar() {
 
@@ -36,7 +37,7 @@ export default function TopBar() {
           <ul className="top-bar__list p-0">
             {topbarList.map(item => (
               <li className="top-bar__list-item" key={item.id}>
-                <a href="#" className='top-bar__list-link'>{item.title}</a>
+                <Link to="/" className='top-bar__list-link'>{item.title}</Link>
               </li>
             ))}
           </ul>
@@ -45,24 +46,24 @@ export default function TopBar() {
           <span className='top-bar__email'>mohammad.mgs.98@gmail.com</span>
           <div className="top-bar__icons">
             <IconTooltip title="مارا در تلگرام دنبال کنید" arrow>
-              <a href="#" className='top-bar__icon-link'>
+              <Link to="/" className='top-bar__icon-link'>
                 <FaTelegram className='top-bar__icon mx-1' />
-              </a>
+              </Link>
             </IconTooltip>
             <IconTooltip title="مارا در یوتیوب دنبال کنید" arrow>
-              <a href="#" className='top-bar__icon-link'>
+              <Link to="/" className='top-bar__icon-link'>
                 <FaYoutube className='top-bar__icon mx-1' />
-              </a>
+              </Link>
             </IconTooltip>
             <IconTooltip title="مارا در توییتر دنبال کنید" arrow>
-              <a href="#" className='top-bar__icon-link'>
+              <Link to="/" className='top-bar__icon-link'>
                 <FaTwitter className='top-bar__icon mx-1' />
-              </a>
+              </Link>
             </IconTooltip>
             <IconTooltip title="مارا در اینستاگرام دنبال کنید" arrow>
-              <a href="#" className='top-bar__icon-link'>
+              <Link to="/" className='top-bar__icon-link'>
                 <FaInstagram className='top-bar__icon mx-1' />
-              </a>
+              </Link>
             </IconTooltip>
           </div>
         </div>

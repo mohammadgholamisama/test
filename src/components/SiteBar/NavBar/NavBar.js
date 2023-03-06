@@ -71,9 +71,9 @@ export default function NavBar() {
                                 <button className='btn btn-success text-white mx-3 d-flrx d-lg-none'>
                                     <FaUserAlt></FaUserAlt>
                                 </button>
-                                <a href='#' className="nav-bar__basket-icon d-flex align-items-center">
+                                <div className="nav-bar__basket-icon d-flex align-items-center">
                                     <SlBasket></SlBasket>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
