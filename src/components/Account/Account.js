@@ -3,7 +3,6 @@ import TopBar from '../SiteBar/TopBar/TopBar'
 import NavBar from '../SiteBar/NavBar/NavBar'
 import './Account.css'
 import { Row, Col, Alert } from 'react-bootstrap'
-import { Navigate } from 'react-router'
 
 
 export default function Account() {
@@ -41,7 +40,7 @@ export default function Account() {
             .then(data => Object.entries(data))
             .then(allUsers => {
                 let findedUser = allUsers.find(user => {
-                    return user[1].emailUser == loginEmail && user[1].passwordUser == loginPassword
+                    return user[1].emailUser === loginEmail && user[1].passwordUser === loginPassword
                 })
 
                 if (findedUser) {
