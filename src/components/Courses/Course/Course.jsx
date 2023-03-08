@@ -27,7 +27,7 @@ export default function Course() {
         });
         findCourse && setCourse(findCourse);
       });
-  }, []);
+  }, [params.courseID]);
 
   return (
     <>
