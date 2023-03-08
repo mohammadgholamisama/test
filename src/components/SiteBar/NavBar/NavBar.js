@@ -51,7 +51,7 @@ export default function NavBar() {
                                 <FaBars></FaBars>
                             </div>
                             <Link to='/' className="nav-bar__image">
-                                <img src="./images/header/logo.png" alt="logo" />
+                                <img src="/images/header/logo.png" alt="logo" />
                             </Link>
                             <div className="nav-bar__menus d-none d-lg-flex">
                                 <ul className="nav-bar__list text-white d-flex p-0">

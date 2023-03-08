@@ -1,0 +1,178 @@
+a {
+    text-decoration: none;
+}
+
+.course-page {
+    margin-top: 30px;
+}
+
+.course-page__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-page__header-title {
+    color: #95da55;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .course-page__header-title {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 993px) {
+    .course-page__header {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .course-page__header-title {
+        margin-bottom: 10px;
+    }
+}
+
+.breadcrumb-li {
+    font-size: 18px;
+    color: gray;
+    cursor: default;
+}
+
+.breadcrumb-li.home a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.divider {
+    color: gray;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.course-page__info-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.course-page__info-left-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-page__info-animation {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #a248d6;
+    box-shadow: #9c27b0 0px 8px 40px;
+    animation: bubble 2s linear infinite;
+}
+
+@keyframes bubble {
+    from {
+        background-color: #951ae7d2;
+    }
+
+    to {
+        background-color: #9636d642;
+    }
+}
+
+.course-page__info-price {
+    color: #f6fdf0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+video {
+    padding: 20px 10px;
+}
+
+.course-page__info-left-group {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.course-page__info-group {
+    background-color: #2ea1ff;
+    margin-right: 5px;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+.course-page__info-Warning {
+    background-color: #bebebe73;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.course-Advantages {
+    color: #fff;
+    padding: 0 30px;
+    font-size: 14px;
+}
+
+.course-Advantages__ul {
+    text-align: right;
+}
+
+.course-page__info-btn {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.course-page__info-btn.showCourse {
+    width: 100%;
+    background-color: #2ea1ff;
+    color: #fff;
+}
+
+.course-page__info-btn.buyCourse {
+    width: 100%;
+    background-color: #4b9123;
+    color: #fff;
+}
+
+.course-page__info-btn.buyCourse:hover {
+    box-shadow: 0 0 10px 2px #4b912380;
+}
+
+.course-page__info-btn.showCourse:hover {
+    box-shadow: 0 0 10px 2px #2ea1ff80;
+}
+
+/* course information */
+
+
+.course-information {
+    margin-top: 50px;
+}
+
+.course-information__box {
+    background-color: #07070769;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-right: 2px dashed #dbdbdbb7;
+    height: 100%;
+}
+
+.course-information__icon {
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.course-information__teacher {
+    font-size: 16px;
+}

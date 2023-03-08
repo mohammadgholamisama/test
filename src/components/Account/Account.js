@@ -53,7 +53,7 @@ export default function Account() {
                 } else {
                     setLoginStatus(false)
                     setLoginError(true)
-                    
+
                 }
 
             })
@@ -87,18 +87,12 @@ export default function Account() {
                 setPasswordUser('')
                 setEmailError(false)
                 setUserSignUpStatus(true)
-
             })
         } else {
             setEmailError(true)
             setUserSignUpStatus(false)
-
         }
-
-
     }
-
-
 
     return (
         <>

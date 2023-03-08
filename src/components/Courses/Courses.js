@@ -24,7 +24,7 @@ export default function Courses() {
                     <Row>
                         {course.map(item => (
                             <Col xs={6} sm={6} lg={4} xl={3} key={item.id}>
-                            <Link to='/' className="courses-box mt-4" >
+                            <Link to={`/course/${item.id}`} className="courses-box mt-4" >
                                 <div className="course-img">
                                     <img src={item.img} alt="course" />
                                 </div>
