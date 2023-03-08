@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import TopBar from '../SiteBar/TopBar/TopBar'
-import NavBar from '../SiteBar/NavBar/NavBar'
 import './Account.css'
 import { Row, Col, Alert } from 'react-bootstrap'
 
@@ -55,17 +53,12 @@ export default function Account() {
                     setLoginError(true)
 
                 }
-
             })
-
     }
-
-
 
     // sign up
 
     const signUpHandler = event => {
-
         event.preventDefault()
 
         if (emailUser.match(emailRegex)) {
@@ -96,8 +89,6 @@ export default function Account() {
 
     return (
         <>
-            <TopBar></TopBar>
-            <NavBar></NavBar>
             <div className="account">
                 <p className='account-title text-center pb-4 pt-2'>حساب کاربری من</p>
                 <div className="account-form mt-2">

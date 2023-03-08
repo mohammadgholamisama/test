@@ -155,7 +155,7 @@ video {
 
 
 .course-information {
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .course-information__box {
@@ -175,4 +175,12 @@ video {
 
 .course-information__teacher {
     font-size: 16px;
+}
+
+.course-description__text{
+    text-align: justify;
+    color: #f1f1f1;
+    font-size: 16px;
+letter-spacing: 0.5px;
+line-height: 30px;
 }

@@ -1,8 +1,6 @@
 import React from "react";
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
-import NavBar from "../../SiteBar/NavBar/NavBar";
-import TopBar from "../../SiteBar/TopBar/TopBar";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Course.css";
@@ -31,9 +29,6 @@ export default function Course() {
 
   return (
     <>
-      <TopBar></TopBar>
-      <NavBar></NavBar>
-
       {course && (
         <div className="course-page">
           <div className="container-fluid container-lg">
@@ -52,6 +47,7 @@ export default function Course() {
                 </ul>
               </div>
             </div>
+
             {/* Course Page Info Course */}
             <div className="course-page__info">
               <Row>
@@ -60,8 +56,8 @@ export default function Course() {
                     <video controls poster={course.img} width={"100%"}></video>
                   </div>
                 </Col>
-                <Col xs={12} md={6}>
-                  <div className="course-page__info-left m-2 m-lg-4 px-4 px-md-0">
+                <Col xs={12} md={6} xl={5}>
+                  <div className="course-page__info-left m-2 m-lg-4 px-2 px-md-0">
                     <div className="course-page__info-left-top">
                       <div className="course-page__info-animation"></div>
                       <span className="course-page__info-price m-auto">
@@ -97,12 +93,12 @@ export default function Course() {
                     </div>
                     <div className="course-page__info-btns ">
                       <Row>
-                        <Col lg={5} xl={4}>
+                        <Col lg={6} xl={5}>
                           <button className="course-page__info-btn  showCourse">
                             مشاهده دروس
                           </button>
                         </Col>
-                        <Col lg={6}>
+                        <Col lg={6} xl={7}>
                           <button className="course-page__info-btn my-4 my-lg-0 buyCourse">
                             خرید دوره
                           </button>
@@ -114,6 +110,7 @@ export default function Course() {
               </Row>
             </div>
 
+            {/* course-information */}
             <div className="course-information">
               <Row>
                 <Col xs={6} md={3} className="my-2 my-md-0">
@@ -122,7 +119,7 @@ export default function Course() {
                       <FaChalkboardTeacher></FaChalkboardTeacher>
                     </div>
                     <span className="course-information__teacher">
-                      مدرس : ......
+                      مدرس : {course.teacher}
                     </span>
                   </div>
                 </Col>
@@ -132,7 +129,7 @@ export default function Course() {
                       <FaClock></FaClock>
                     </div>
                     <span className="course-information__teacher">
-                      وضعیت دوره : پیش فروش
+                      وضعیت دوره : {course.status}
                     </span>
                   </div>
                 </Col>
@@ -142,7 +139,7 @@ export default function Course() {
                       <FaFileVideo></FaFileVideo>
                     </div>
                     <span className="course-information__teacher">
-                      تعداد درس : نامشخص
+                      تعداد درس : {course.lesson}
                     </span>
                   </div>
                 </Col>
@@ -157,6 +154,19 @@ export default function Course() {
                   </div>
                 </Col>
               </Row>
+            </div>
+
+            {/* Course Description */}
+
+            <div className="course-description my-5">
+              <p className="course-description__text">
+                کتابخانه‌ها باعث افزایش سرعت کدنویسی میشن. در حدی که تو بازار
+                کار هم از کتابخانه های مختلفی برای توسعه پروژه‌ها استفاده میشه.
+                تو این دوره 20 کتابخانه پرکاربرد و پراستفاده ری‌اکت که تو بازار
+                کار برای توسعه پروژه های مختلفی استفاده میشه رو بصورت پروژه محور
+                یاد میگیری. این موضوع هم سرعت کدنویسی شما رو افزایش میده، هم
+                دستتون تو کدنویسی بازتره و هم شانس استخدامیتون رو بالا می‌بره.
+              </p>
             </div>
           </div>
         </div>
