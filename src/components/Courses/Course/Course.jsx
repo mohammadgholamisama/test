@@ -23,7 +23,7 @@ export default function Course() {
       .then((res) => res.json())
       .then((data) => {
         let findCourse = data.find((course) => {
-          return course.id == +params.courseID;
+          return course.id === +params.courseID;
         });
         findCourse && setCourse(findCourse);
       });
