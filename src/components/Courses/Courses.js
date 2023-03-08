@@ -5,7 +5,6 @@ import './Courses.css'
 
 export default function Courses() {
 
-
     const [course , setCourse] = useState([])
     
     useEffect(() => {
@@ -15,7 +14,6 @@ export default function Courses() {
             setCourse(data)
         })
     }, [])
-
 
     return (
         <section className='courses my-5'>
