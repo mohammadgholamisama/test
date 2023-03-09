@@ -1,6 +1,4 @@
 import React from "react";
-import { useParams } from "react-router";
-import { useState, useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Course.css";
@@ -10,25 +8,28 @@ import {
   FaFileVideo,
   FaUserGraduate,
 } from "react-icons/fa";
+import useFetch from "../../../hooks/useFetch";
+import CoursePagePending from "./CoursePagePending/CoursePagePending";
 
 export default function Course() {
-  let params = useParams();
-
-  const [course, setCourse] = useState();
-
-  useEffect(() => {
-    fetch("https://react-b2956-default-rtdb.firebaseio.com/courses.json")
-      .then((res) => res.json())
-      .then((data) => {
-        let findCourse = data.find((course) => {
-          return course.id === +params.courseID;
-        });
-        findCourse && setCourse(findCourse);
-      });
-  }, [params.courseID]);
+  const [course, isPending, error] = useFetch();
 
   return (
     <>
+      {isPending && <CoursePagePending />}
+      {error && (
+        <div className="course-page__error d-flex align-items-center justify-content-center py-5">
+          <div class="spinner-grow text-danger" role="status">
+            <span class="sr-only"></span>
+          </div>
+          <h1 className="text-center text-danger mx-md-5">
+            اتصال با سرور انجام نشد
+          </h1>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="sr-only"></span>
+          </div>
+        </div>
+      )}
       {course && (
         <div className="course-page">
           <div className="container-fluid container-lg">

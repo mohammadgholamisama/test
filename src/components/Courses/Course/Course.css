@@ -184,3 +184,10 @@ video {
 letter-spacing: 0.5px;
 line-height: 30px;
 }
+
+
+/* pending */
+
+.pending-video{
+    padding: 150px 0;
+}
