@@ -24,8 +24,7 @@ export default function useFetch() {
           setError(true);
           setIsPending(false);
         });
-  }, []);
-  // }, [params.courseID]);
+  }, [params.courseID]);
 
   return [course, isPending, error];
 }
